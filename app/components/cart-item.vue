@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps(["name", "image", "price", "amount"]);
-const emit = defineEmits(["increase", "decrease"]);
+const emit = defineEmits(["increase", "decrease", "remove"]);
 </script>
 <template>
   <div class="cart-item">
@@ -26,7 +26,12 @@ const emit = defineEmits(["increase", "decrease"]);
         </div>
       </div>
       <div class="price">
-        <p>${{ price }}</p>
+        <div>
+          <p>${{ price }}</p>
+        </div>
+        <button class="delete-cta" @click="emit('remove')">
+          <Icon name="uil:times" />
+        </button>
       </div>
     </div>
   </div>
@@ -80,14 +85,33 @@ const emit = defineEmits(["increase", "decrease"]);
     }
 
     .price {
-      padding: 1rem;
-      background-color: rgba($color: #fff, $alpha: 0.2);
-      border-radius: 6px;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      p {
-        font-weight: 800;
+      gap: 1rem;
+      div {
+        padding: 1rem;
+        background-color: rgba($color: #fff, $alpha: 0.2);
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          font-weight: 800;
+        }
+      }
+      .delete-cta {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        span {
+          color: rgba($color: red, $alpha: 0.5);
+          font-size: 2rem;
+
+          &:hover {
+            color: rgba($color: red, $alpha: 1);
+          }
+        }
       }
     }
   }

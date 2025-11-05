@@ -22,7 +22,7 @@ const links = computed(() => [
   <div>
     <header :class="{ scrolled: y > 900 || route.name != 'index' }">
       <NuxtLink to="/" class="title">Excelsior</NuxtLink>
-      <nav>
+      <nav class="links">
         <template v-for="link in links">
           <NuxtLink :to="link.path" active-class="active">{{
             link.name
@@ -81,10 +81,13 @@ header {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 2rem;
+  align-items: center;
   padding: 1rem;
 
+  .links {
+    flex-grow: 1;
+  }
   .icon-more {
     @include animations.transition-all;
     font-size: 1.5rem;

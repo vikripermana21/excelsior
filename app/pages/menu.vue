@@ -249,7 +249,7 @@ onUnmounted(() => {
     }
 
     @include breakpoints.break(xl) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
     @include breakpoints.break(md) {

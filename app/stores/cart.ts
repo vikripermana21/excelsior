@@ -28,13 +28,32 @@ export const useCartStore = defineStore(
       filtered.amount--;
     };
 
+    const remove = (value: IProduct) => {
+      let filtered = carts.value.filter((item) => item.name != value.name);
+      if (!filtered) return;
+      carts.value = filtered;
+    };
+
     const getTotalPrice = () => {
-      return carts.value
+      if (carts?.value.length == 0) return 0;
+      return carts?.value
         .map((item) => item.amount * item.price)
         .reduce((acc, curr) => acc + curr);
     };
 
-    return { carts, addToCart, increaseAmount, decreaseAmount, getTotalPrice };
+    const reset = () => {
+      carts.value = [];
+    };
+
+    return {
+      carts,
+      addToCart,
+      increaseAmount,
+      decreaseAmount,
+      remove,
+      getTotalPrice,
+      reset,
+    };
   },
   { persist: true },
 );
