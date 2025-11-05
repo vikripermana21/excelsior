@@ -1,0 +1,49 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Tiktok Sans", sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: colors.$primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+  transition: all;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: white;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.animate-bounce {
+  animation: animations.$animate-bounce;
+}
+
+.animate-pulse {
+  animation: animations.$animate-pulse;
+}
+
+.font-allura {
+  font-family: "Allura", cursive;
+}
