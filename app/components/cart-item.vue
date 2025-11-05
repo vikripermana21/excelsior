@@ -79,7 +79,7 @@ const emit = defineEmits(["increase", "decrease", "remove"]);
 
         .amount {
           font-size: 0.8rem;
-          color: grey;
+          color: colors.$alternative-color;
         }
       }
     }
@@ -89,7 +89,7 @@ const emit = defineEmits(["increase", "decrease", "remove"]);
       gap: 1rem;
       div {
         padding: 1rem;
-        background-color: rgba($color: #fff, $alpha: 0.2);
+        background-color: rgba($color: colors.$secondary-color, $alpha: 0.2);
         border-radius: 6px;
         display: flex;
         justify-content: center;

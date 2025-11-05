@@ -58,14 +58,14 @@ const links = computed(() => [
 
 <style lang="scss" scoped>
 .title {
-  color: white;
+  color: colors.$secondary-color;
   font-weight: 100;
   font-size: 2rem;
   font-family: "Monsieur La Doulaise", cursive;
 }
 
 .scrolled {
-  background-color: #1a1a1a;
+  background-color: colors.$primary-color;
 }
 
 .rotate-180 {

@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
   font-family: "Tiktok Sans", sans-serif;
-  color: white;
+  color: colors.$secondary-color;
   box-sizing: border-box;
 }
 
@@ -17,13 +17,13 @@ a {
   transition: all;
 
   &:hover {
-    color: white;
+    color: colors.$secondary-color;
     cursor: pointer;
   }
 }
 
 .active {
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .page-enter-active,

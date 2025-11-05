@@ -198,18 +198,18 @@ onUnmounted(() => {
       .category-pill {
         font-size: 0.8rem;
         padding: 0.5rem 1rem;
-        border: 1px solid grey;
+        border: 1px solid colors.$alternative-color;
         border-radius: 100px;
-        color: grey;
+        color: colors.$alternative-color;
 
         &.active {
-          background-color: white;
-          color: #1a1a1a !important;
+          background-color: colors.$secondary-color;
+          color: colors.$primary-color !important;
         }
 
         &:hover {
-          color: white;
-          border-color: white;
+          color: colors.$secondary-color;
+          border-color: colors.$secondary-color;
           cursor: pointer;
         }
       }

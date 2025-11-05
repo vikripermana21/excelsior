@@ -64,7 +64,7 @@ const handleSubmit = () => {
     justify-content: center;
 
     p {
-      color: grey;
+      color: colors.$alternative-color;
     }
 
     a {

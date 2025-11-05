@@ -121,7 +121,7 @@ h1 {
 .about {
   min-height: 100vh;
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: colors.$primary-color;
   position: relative;
   z-index: 2;
   display: flex;
@@ -176,7 +176,7 @@ h1 {
 
 .dishes {
   position: relative;
-  background-color: #1a1a1a;
+  background-color: colors.$primary-color;
   z-index: 2;
   padding: 1rem;
   display: flex;
@@ -201,12 +201,12 @@ h1 {
         .cta {
           width: fit-content;
           padding: 1rem 2rem;
-          background-color: #f3f1e7;
+          background-color: colors.$secondary-color;
           outline: none;
           border: none;
           font-size: 1.5rem;
           cursor: pointer;
-          color: #1a1a1a;
+          color: colors.$primary-color;
         }
       }
     }

@@ -34,7 +34,7 @@ import { useToast } from "~/composables/useToasts";
 const { toasts, remove } = useToast();
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .toast-container {
   position: fixed;
   top: 1rem;
@@ -81,7 +81,7 @@ const { toasts, remove } = useToast();
   flex: 1;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: #1a1a1a;
+  color: colors.$primary-color;
 }
 
 .toast-close {
@@ -103,7 +103,7 @@ const { toasts, remove } = useToast();
 /* Toast variants */
 .toast-success {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .toast-success .toast-icon {
@@ -111,12 +111,12 @@ const { toasts, remove } = useToast();
 }
 
 .toast-success .toast-message {
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .toast-error {
   background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .toast-error .toast-icon {
@@ -124,12 +124,12 @@ const { toasts, remove } = useToast();
 }
 
 .toast-error .toast-message {
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .toast-warning {
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .toast-warning .toast-icon {
@@ -137,12 +137,12 @@ const { toasts, remove } = useToast();
 }
 
 .toast-warning .toast-message {
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .toast-info {
   background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  color: white;
+  color: colors.$secondary-color;
 }
 
 .toast-info .toast-icon {
@@ -150,7 +150,7 @@ const { toasts, remove } = useToast();
 }
 
 .toast-info .toast-message {
-  color: white;
+  color: colors.$secondary-color;
 }
 
 /* Animations */

@@ -31,7 +31,7 @@ const handleAddToCart = () => {
 <style lang="scss" scoped>
 .product-card {
   padding: 0.5rem;
-  background-color: white;
+  background-color: colors.$secondary-color;
   width: fit-content;
   display: flex;
   flex-direction: column;
